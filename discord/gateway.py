@@ -447,7 +447,17 @@ class DiscordWebSocket:
             'd': {
                 'token': self.token,
                 'capabilities': self.capabilities.value,
-                'properties': self._super_properties,
+                'properties': {
+                                "os": "Android",
+                                "browser": "Discord Android",
+                                "device": "Android",
+                                "system_locale": "en-US",
+                                "browser_user_agent": "Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.152 Mobile Safari/537.36",
+                                "browser_version": "88.0.4324.152",
+                                "os_version": "10",
+                                "release_channel": "stable",
+                                "client_build_number": 12345,  # Update with the latest
+                            },
                 'presence': presence,
                 'compress': not self._zlib_enabled,  # We require at least one form of compression
                 'client_state': {
